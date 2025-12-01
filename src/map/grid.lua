@@ -4,7 +4,7 @@ grid.__index = grid
 local lg = love.graphics
 
 local subdivision = 3
-local lineWidth = 2
+local lineWidth = 1.5
 
 grid.new = function(size, cellSize)
   local self = setmetatable({
@@ -62,7 +62,7 @@ end
 
 grid.draw = function(self)
   lg.push("all")
-  lg.setColor(1,1,1,1)
+  lg.setColor(.6,.6,.6,1)
   lg.draw(self.hortLines)
   lg.draw(self.vertLines)
   lg.pop()
