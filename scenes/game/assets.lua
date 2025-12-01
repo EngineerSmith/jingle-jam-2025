@@ -1,10 +1,6 @@
 local assets = {
--- textures
   "ui.logoES",
-  "ui.3slice.basic",
--- audios
-  "audio.ui.select",
-  "audio.ui.click",
+  "input.pc.0",
 }
 local lookup = { }
 for _, asset in ipairs(assets) do

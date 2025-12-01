@@ -32,26 +32,26 @@ local loopSource = function(source)
   return source
 end
 
-local g3d = require("libs.g3d")
-local objLoader = function(objContent, up, mtlPath, UVFlip)
-  if mtlPath == "NIL" then mtlPath = nil end
-  local model
-  local uFlip, vFlip = false, false
-  if UVFlip == "uv" then
-    uFlip, vFlip = true, true
-  elseif UVFlip == "v" then
-    uFlip, vFlip = false, true
-  elseif UVFlip == "u" then
-    uFlip, vFlip = true, false
-  end
-  model = g3d.newModel(objContent, mtlPath, nil, nil, nil, nil, uFlip, vFlip)
-  if up == "y" then
-    model:setRotation(math.rad(90), 0, 0)
-  elseif up == "x" then
-    model:setRotation(0, math.rad(90), 0)
-  end
-  return model
-end
+-- local g3d = require("libs.g3d")
+-- local objLoader = function(objContent, up, mtlPath, UVFlip)
+--   if mtlPath == "NIL" then mtlPath = nil end
+--   local model
+--   local uFlip, vFlip = false, false
+--   if UVFlip == "uv" then
+--     uFlip, vFlip = true, true
+--   elseif UVFlip == "v" then
+--     uFlip, vFlip = false, true
+--   elseif UVFlip == "u" then
+--     uFlip, vFlip = true, false
+--   end
+--   model = g3d.newModel(objContent, mtlPath, nil, nil, nil, nil, uFlip, vFlip)
+--   if up == "y" then
+--     model:setRotation(math.rad(90), 0, 0)
+--   elseif up == "x" then
+--     model:setRotation(0, math.rad(90), 0)
+--   end
+--   return model
+-- end
 
 local list = {
 -- Graphics

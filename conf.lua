@@ -105,7 +105,11 @@ love.conf = function(t)
   t.window.depth = true
   t.usedpiscale = true
 
-  t.graphics.gammacorrect = true
+  if love._version_major >= 12 then
+    t.graphics.gammacorrect = true
+  else
+    t.window.gammacorrect = true
+  end
 
   t.audio.mic = false
   t.audio.mixwithsystem = true
